@@ -21,12 +21,12 @@ export const Accordion: FunctionComponent<AccordionProps> = ({ title, options })
                 {title}
                 <img
                     className={classNames({ hidden: isOpen }, 'inline-block ml-4 group-active:rotate-180 transition-all duration-300')}
-                    src={`${process.env.PUBLIC_URL}/images/icon-arrow-up.svg`}
+                    src={`${process.env.PUBLIC_URL}/images/icon-arrow-down.svg`}
                     alt="expand"
                 />
                 <img
                     className={classNames({ hidden: !isOpen }, 'inline-block ml-4 group-active:rotate-180 transition-all duration-500')}
-                    src={`${process.env.PUBLIC_URL}/images/icon-arrow-down.svg`}
+                    src={`${process.env.PUBLIC_URL}/images/icon-arrow-up.svg`}
                     alt="close"
                 />
             </button>

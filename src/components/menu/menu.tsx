@@ -16,12 +16,12 @@ export const Menu: FunctionComponent<MenuProps> = ({ options, title }) => {
                 {title}
                 <img
                     className={classNames({ hidden: isOpen }, 'inline-block ml-2 group-active:rotate-180 transition-all duration-300')}
-                    src={`${process.env.PUBLIC_URL}/images/icon-arrow-up.svg`}
+                    src={`${process.env.PUBLIC_URL}/images/icon-arrow-down.svg`}
                     alt="expand"
                 />
                 <img
                     className={classNames({ hidden: !isOpen }, 'inline-block ml-2 group-active:rotate-180 transition-all duration-500')}
-                    src={`${process.env.PUBLIC_URL}/images/icon-arrow-down.svg`}
+                    src={`${process.env.PUBLIC_URL}/images/icon-arrow-up.svg`}
                     alt="close"
                 />
             </button>

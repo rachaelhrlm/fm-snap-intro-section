@@ -713,6 +713,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
+.px-4{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
 .pt-4{
   padding-top: 1rem;
 }
@@ -797,6 +801,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .hover\:border-neutral-gray:hover{
   --tw-border-opacity: 1;
   border-color: hsl(0 0% 41% / var(--tw-border-opacity));
+}
+.hover\:border-neutral-off-black:hover{
+  --tw-border-opacity: 1;
+  border-color: hsl(0 0% 8% / var(--tw-border-opacity));
 }
 .hover\:bg-transparent:hover{
   background-color: transparent;
@@ -1131,6 +1139,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   .xl\:block{
     display: block;
   }
+  .xl\:inline-block{
+    display: inline-block;
+  }
   .xl\:flex{
     display: flex;
   }
@@ -1201,6 +1212,9 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding-left: 0px;
     padding-right: 0px;
   }
+  .xl\:pt-5{
+    padding-top: 1.25rem;
+  }
   .xl\:text-left{
     text-align: left;
   }
@@ -1217,5 +1231,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
   .xl\:leading-\[3\.5rem\]{
     line-height: 3.5rem;
+  }
+  .xl\:text-neutral-gray{
+    --tw-text-opacity: 1;
+    color: hsl(0 0% 41% / var(--tw-text-opacity));
   }
 }
