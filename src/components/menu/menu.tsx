@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, { FunctionComponent, ReactNode, useState } from 'react';
+import React, { FunctionComponent, ReactNode, useEffect, useState } from 'react';
 
 export interface MenuProps {
     title: ReactNode;
@@ -8,6 +8,13 @@ export interface MenuProps {
 
 export const Menu: FunctionComponent<MenuProps> = ({ options, title }) => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
+
+    useEffect(() => {
+        return () => {
+            setIsOpen(false);
+        };
+    }, []);
+
     return (
         <div>
             <button

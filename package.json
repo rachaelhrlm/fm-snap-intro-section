@@ -1,6 +1,6 @@
 {
     "name": "fm-snap-intro-section",
-    "homepage": "https://rachaelhrlm.github.io/fm-snap-intro-section",
+    "homepage": "fm-snap-intro-section",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
