@@ -3,10 +3,10 @@ import React, { FunctionComponent, ReactNode, useEffect, useState } from 'react'
 
 interface AccordionProps {
     title: string | ReactNode;
-    children: ReactNode;
+    options: ReactNode[];
 }
 
-export const Accordion: FunctionComponent<AccordionProps> = ({ title, children }) => {
+export const Accordion: FunctionComponent<AccordionProps> = ({ title, options }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
@@ -17,7 +17,7 @@ export const Accordion: FunctionComponent<AccordionProps> = ({ title, children }
 
     return (
         <>
-            <button className="group" onClick={() => setIsOpen(!isOpen)}>
+            <button className="group hover:opacity-50 transition-all duration-300" onClick={() => setIsOpen(!isOpen)}>
                 {title}
                 <img
                     className={classNames({ hidden: isOpen }, 'inline-block ml-4 group-active:rotate-180 transition-all duration-300')}
@@ -36,7 +36,13 @@ export const Accordion: FunctionComponent<AccordionProps> = ({ title, children }
                     { 'scale-y-0 h-0': !isOpen },
                     'overflow-hidden transition-all duration-300 origin-top ease-in-out',
                 )}>
-                {children}
+                <ul className="space-y-4">
+                    {options.map((option) => (
+                        <li>
+                            <button className="hover:opacity-50 transition-all duration-300">{option}</button>
+                        </li>
+                    ))}
+                </ul>
             </div>
         </>
     );
